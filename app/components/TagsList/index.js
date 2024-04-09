@@ -7,7 +7,9 @@ export default async function TagsList({ tags }) {
       <TagIcon className="svg-icon" />
       <ul className={styles.list}>
         {tags.map((tag) => (
-          <li key={tag.id}>{tag.name}</li>
+          <li key={tag.id}>
+            {tag.name} <sup>{tag.count}</sup>
+          </li>
         ))}
       </ul>
     </div>
