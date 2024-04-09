@@ -35,6 +35,8 @@ export async function fetchNotes() {
           nodes {
             id
             name
+            count
+            databaseId
           }
         }
       }
@@ -64,6 +66,8 @@ export async function fetchNote(id, idType = 'DATABASE_ID') {
           nodes {
             id
             name
+            count
+            databaseId
           }
         }
       }
