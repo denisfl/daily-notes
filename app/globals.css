@@ -9,20 +9,35 @@
   --link-color-hover: #d00;
 
   --bg-color: #fff;
-  --text-color: #444;
+  --text-color: #333;
   --text-size: 20;
   --base-line-height: 1.6;
   --leading: calc(var(--base-line-height) * 1rem);
   --site-width: 780px;
+
+  --header-bg: #f2f2f2;
+
+  --code-text-color: #464646;
+  --code-bg-color: #f2f2f2;
+
+  --skeleton-item-color-from: #dbdbdb;
+  --skeleton-item-color-to: hsla(0, 0%, 86%, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #444;
+    --bg-color: #1e1e1e;
     --text-color: #fbfbfb;
+    --header-bg: #000000;
 
     --link-color: #d4e4ff;
     --link-color-hover: rgb(255, 190, 190);
+
+    --code-text-color: #dadada;
+    --code-bg-color: #000000;
+
+    --skeleton-item-color-from: #353535;
+    --skeleton-item-color-to: #35353592;
   }
 }
 
@@ -42,7 +57,6 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   line-height: var(--base-line-height);
-  /* font-size: var(--text-size); */
   font-size: calc(var(--text-size) / 18 * 100%);
 }
 .container {
@@ -60,7 +74,7 @@ body {
 .the-header {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  background-color: #f2f2f2;
+  background-color: var(--header-bg);
 }
 a {
   color: var(--link-color);
@@ -76,8 +90,6 @@ a:hover {
 }
 
 p {
-  /* margin-block-start: 1rem; */
-  /* margin-block-end: 1rem; */
   line-height: calc(var(--leading) * 1.2);
   margin-top: var(--leading);
   margin-bottom: var(--leading);
@@ -115,16 +127,16 @@ li {
 }
 
 .wp-block-code {
-  color: #464646;
-  background: #f2f2f2;
+  color: var(--code-text-color);
+  background-color: var(--code-bg-color);
   padding: 0.2rem 0.5rem;
   border-radius: 0.25rem;
   overflow-x: auto;
 }
 
 p code {
-  color: #464646;
-  background: #f2f2f2;
+  color: var(--code-text-color);
+  background-color: var(--code-bg-color);
   padding: 0.2rem 0.5rem;
   border-radius: 0.25rem;
 }
@@ -155,7 +167,12 @@ p code {
   line-height: 1.5rem;
 }
 .skeleton-item {
-  background: linear-gradient(90deg, #dbdbdb 25%, hsla(0, 0%, 86%, 0.5) 50%, #dbdbdb 75%);
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-item-color-from) 25%,
+    var(--skeleton-item-color-to) 50%,
+    var(--skeleton-item-color-from) 75%
+  );
   background-size: 400% 100%;
   width: 100%;
   border-radius: 4px;
