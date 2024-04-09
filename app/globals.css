@@ -22,6 +22,8 @@
 
   --skeleton-item-color-from: #dbdbdb;
   --skeleton-item-color-to: hsla(0, 0%, 86%, 0.5);
+
+  --container-gap: 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -63,13 +65,13 @@ body {
   max-width: var(--site-width);
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--container-gap);
 }
 .main {
   max-width: var(--site-width);
   margin-right: auto;
   margin-left: auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem var(--container-gap);
 }
 .the-header {
   padding-top: 0.25rem;
@@ -122,8 +124,10 @@ li {
   margin-bottom: 3rem;
 }
 .note-content img {
-  max-width: 100%;
+  max-width: calc(100%);
   height: auto;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 14px #0000003b;
 }
 
 .wp-block-code {
