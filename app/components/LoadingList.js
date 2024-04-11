@@ -1,6 +1,6 @@
-export default function Loading() {
+export default function LoadingList() {
   return (
-    <section className="main">
+    <section>
       <article className="note">
         <h2>
           <div className="skeleton">

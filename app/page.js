@@ -1,8 +1,8 @@
-import { fetchNotes } from '@/app/helpers/api'
-
-import NotesList from '@/app/components/NotesList'
-
-export default async function Home() {
-  const notes = await fetchNotes()
-  return <NotesList notes={notes} />
+import Hero from '@/app/components/Hero'
+export default function Home() {
+  return (
+    <div class="main">
+      <Hero />
+    </div>
+  )
 }

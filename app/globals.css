@@ -85,6 +85,13 @@ a:hover {
   color: var(--link-color-hover);
 }
 
+.link {
+  text-decoration: none;
+}
+.link-text {
+  text-decoration: underline;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -151,6 +158,10 @@ p code {
   vertical-align: middle;
   top: -0.2em;
   position: relative;
+}
+
+.svg-icon + span {
+  margin-left: 0.25rem;
 }
 
 .skeleton {
