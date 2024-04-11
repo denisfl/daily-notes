@@ -1,10 +1,13 @@
+import { Roboto_Slab } from 'next/font/google'
 import { DocumentTextIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import styles from './styles.module.css'
 
+const roboto = Roboto_Slab({ subsets: ['cyrillic'] })
+
 export default function Hero() {
   return (
-    <div className={styles.hero}>
+    <div className={[styles.hero, roboto.className].join(' ')}>
       <p>Hey,</p>
       <p>
         I am Denis Fedosov-Ledovskikh. I have been making web-services for more than fifteen years.
