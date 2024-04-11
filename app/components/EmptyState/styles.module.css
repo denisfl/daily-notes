@@ -1,0 +1,9 @@
+.empty {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.icon {
+  font-size: 5rem;
+  opacity: 0.3;
+}

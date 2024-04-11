@@ -16,12 +16,12 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className={inter.className}>
-        <header className="the-header">
+        {/* <header className="the-header">
           <div className="container">
             <TheNavigation />
           </div>
-        </header>
-        <main className="main">{children}</main>
+        </header> */}
+        {children}
       </body>
     </html>
   )

@@ -1,4 +1,5 @@
 import { TagIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 import styles from './styles.module.css'
 
 export default async function TagsList({ tags }) {
@@ -8,7 +9,9 @@ export default async function TagsList({ tags }) {
       <ul className={styles.list}>
         {tags.map((tag) => (
           <li key={tag.id}>
-            {tag.name} <sup>{tag.count}</sup>
+            <Link className={styles.link} href={`notes/tag/${tag.name}`}>
+              {tag.name} <sup>{tag.count}</sup>
+            </Link>
           </li>
         ))}
       </ul>

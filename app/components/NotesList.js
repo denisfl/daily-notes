@@ -1,8 +1,10 @@
 import NoteTitle from '@/app/components/NoteTitle'
 import NoteContent from '@/app/components/NoteContent'
 import NoteFooter from '@/app/components/NoteFooter'
+import EmptyState from '@/app/components/EmptyState'
 
 export default async function Notes({ notes }) {
+  if (notes.nodes.length === 0) return <EmptyState />
   return (
     <section>
       {notes.nodes.map((note) => {
