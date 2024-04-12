@@ -7,7 +7,9 @@ const fetcher = (query, variables) => request(API_URL, query, variables)
 
 export default function useRequest(query, variables) {
   const fetcherWithVariables = () => fetcher(query, variables)
-  const { data, error } = useSWR(query + JSON.stringify(variables), fetcherWithVariables)
+  const { data, error } = useSWR(query + JSON.stringify(variables), fetcherWithVariables, {
+    revalidateOnMount: true,
+  })
   return {
     data: data || null,
     isLoading: !error && !data,
