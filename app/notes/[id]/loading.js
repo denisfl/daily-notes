@@ -1,12 +1,6 @@
-import styles from '@/app/page.module.css'
-import Link from 'next/link'
-
 export default function Loading() {
   return (
     <section>
-      <div className={styles.backLink}>
-        <Link href="/">← Назад</Link>
-      </div>
       <article className="note">
         <h2>
           <div className="skeleton">
