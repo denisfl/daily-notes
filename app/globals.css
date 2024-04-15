@@ -91,7 +91,9 @@ a:hover {
 .link-text {
   text-decoration: underline;
 }
-
+figure {
+  text-align: center;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

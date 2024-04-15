@@ -7,9 +7,14 @@
 
 .link {
   text-decoration: none;
+  display: inline-flex;
 }
 
 .active {
   color: var(--text-color);
   pointer-events: none;
+}
+
+.isRight {
+  margin-left: auto;
 }
