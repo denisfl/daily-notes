@@ -94,6 +94,11 @@ a:hover {
 figure {
   text-align: center;
 }
+figcaption {
+  margin-bottom: 2rem;
+  opacity: 0.75;
+  font-size: 0.85rem;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
