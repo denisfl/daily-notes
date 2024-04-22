@@ -1,7 +1,9 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const isProduction = process.env.NODE_ENV === 'production'
 
 export const metadata = {
   title: 'Denis Fedosov-Ledovskikh',
@@ -16,6 +18,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
       </head>
       <body className={inter.className}>{children}</body>
+      {isProduction && <GoogleAnalytics gaId="G-6SHHM76DQN" />}
     </html>
   )
 }
