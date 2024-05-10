@@ -1,8 +1,8 @@
 import { gql } from 'graphql-request'
 
 export default gql`
-  query fetchNotes($tag: String = "") {
-    posts(where: { status: PUBLISH, tag: $tag }) {
+  query fetchNotes($tag: String = "", $endCursor: String = "", $first: Int = 25) {
+    posts(where: { status: PUBLISH, tag: $tag }, first: $first, after: $endCursor) {
       nodes {
         id
         title
