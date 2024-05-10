@@ -4,10 +4,10 @@ import NoteFooter from '@/app/components/NoteFooter'
 import EmptyState from '@/app/components/EmptyState'
 
 export default function Notes({ notes }) {
-  if (notes.nodes.length === 0) return <EmptyState />
+  if (notes.length === 0) return <EmptyState />
   return (
     <section>
-      {notes.nodes.map((note) => {
+      {notes.map((note) => {
         return (
           <article className="note" key={note.id}>
             <NoteTitle title={note.title} noteId={note.databaseId} />
