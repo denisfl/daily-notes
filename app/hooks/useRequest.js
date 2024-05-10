@@ -27,10 +27,6 @@ export default function useRequest(query, variables) {
     revalidateOnMount: true,
   })
 
-  if (typeof setSize !== 'function') {
-    throw new Error('setSize is not a function. Check the useSWRInfinite hook.')
-  }
-
   return variables?.id
     ? { data: data ? data[0] : null, isLoading: !error && !data, isError: error }
     : {
