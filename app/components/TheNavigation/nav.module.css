@@ -7,7 +7,17 @@
 
 .link {
   text-decoration: none;
-  display: inline-flex;
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  line-height: 2;
+}
+
+.link > img {
+  vertical-align: middle;
+  vertical-align: middle;
+  top: -0.2em;
+  position: relative;
 }
 
 .active {
@@ -17,4 +27,17 @@
 
 .isRight {
   margin-left: auto;
+}
+
+.divider {
+  flex: 1;
+}
+
+.adaptiveText {
+  display: none;
+}
+@media (min-width: 580px) {
+  .adaptiveText {
+    display: inline;
+  }
 }
