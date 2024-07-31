@@ -16,6 +16,17 @@ export default gql`
           databaseId
         }
       }
+      seoData {
+        metadesc
+        openGraphTitle
+        opengraphimage {
+          node {
+            id
+            sourceUrl
+          }
+        }
+        opengraphdescription
+      }
     }
   }
 `
