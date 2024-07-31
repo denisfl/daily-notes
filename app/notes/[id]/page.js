@@ -52,11 +52,11 @@ export default function Note({ params }) {
         openGraph={{
           title: data.post.seoData.opengraphTitle || data.post.title,
           description: data.post.seoData.opengraphDescription,
-          // images: [
-          //   {
-          //     url: data.post.seoData.opengraphImage?.sourceUrl || '',
-          //   },
-          // ],
+          images: [
+            {
+              url: data.post.seoData.opengraphimage?.sourceUrl || '',
+            },
+          ],
         }}
       />
       <section>
